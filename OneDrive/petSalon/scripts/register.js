@@ -27,12 +27,36 @@ let pet3 = {
 
 function displayName(){
     //display pet names
-    console.log(pets[0].name);
     console.log(pets[1].name);
-    
+    console.log(pets[2].name);
+    console.log(pets[3].name);
     
 }
 
+for (let i = 0; i < 10; i++) {
+    //const element = array[i];
+    console.log(pets[i]);
+    
+}
+
+// for (let i = 0; i < 6; i++) {
+//     console.log(cars[i])
+// }
+
+
+pets.push("Bushy")
+for (let i = 0; i < pets.length; i++) {
+    console.log(pets[i])
+}
+
+// cars.push("Bugatti")
+// cars.push("Ferrari")
+// for (let i = 0; i < cars.length; i++) {
+    // console.log(cars[i])
+// }
+
+console.log(pet2)
+// console.log(pets)
 //HINTS:
 // use a for loop and travel the array
 // use brute force

@@ -1,4 +1,4 @@
-//object Literala
+//object Literals
 let student1 = {
     name:"jon Smith",
     age:99,
