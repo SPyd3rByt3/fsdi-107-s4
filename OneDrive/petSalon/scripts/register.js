@@ -1,3 +1,7 @@
+
+
+
+
 console.log("register.js");
 let pets = []; //empty array
 //create pets
