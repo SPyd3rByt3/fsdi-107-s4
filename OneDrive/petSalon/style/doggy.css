@@ -35,17 +35,55 @@ body{
     border-radius: 15%;
 }
 
-#result{
+.grid-two-column{
 
-    display: grid;
+}
+
+
+/* #result{
+
+    display: flex;
 
     grid-template-columns: 1fr 1fr 1fr 1fr;
 
     column-gap: 10px;
 
+} */
+
+
+.container-sm{
+    /* background-color: rgb(198, 108, 108); */
+    font-weight: bolder;
+}
+.container-sm h2{
+    text-align: center;
+    background-color: coral;
+    border-radius: 15%;
+    font-family: arial;
+    font-weight: bolder;
+    color: rgb(255, 255, 0);
+}
+.container-sm p{
+    background-color: darkcyan;
+    font-size: larger;
+    font-weight: 900;
+    color: coral;
+} 
+
+
+.container-sm grooming{
+    color: #ffcc00;
+}
+.container-sm nails{
+    color: chartreuse;
+}
+.container-sm vaccines{
+    color: crimson;
 }
 
 .pets{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 
     border: 1px solid black;
 
@@ -54,7 +92,6 @@ body{
     padding: 10px;
 
     background-color: #dedede;
-
 }
 
 img{
