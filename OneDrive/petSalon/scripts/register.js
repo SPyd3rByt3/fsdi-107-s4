@@ -1,45 +1,83 @@
 let pets = [];//empty array
 
+let inputName= document.getElementById("txtName");
+let inputAge= document.getElementById("txtAge");
+let inputGender= document.getElementById("txtGender");
+let inputService= document.getElementById("txtService");
+let inputBreed= document.getElementById("txtBreed");
+let inputVaccine= document.getElementById("txtVaccine");
 
-function Pet(name,age,gender,service){
+function Pet(name,age,gender,service,breed,vaccine){
     //properties = parameter (value)
     this.name=name;
     this.age=age;
     this.gender=gender;
     this.service=service;
+    this.breed=breed;
+    this.vaccine=vaccine;
+}
+
+function isValid(pet){
+    let validation=true;
+
+    if(pets.name==""){
+        validation = false;
+    }
+    if(pet.service==""){
+        validation = false;
+
+    }
+
+    return validation;
 }
 
 function register(){
-    let inputName= document.getElementById("txtName").value;
-    let inputAge = document.getElementById("txtAge").value;
-    let inputGender =document.getElementById("txtGender").value;
-    let inputService = document.getElementById("txtService").value;
+    // let inputName= document.getElementById("txtName").value;
+    // let inputAge = document.getElementById("txtAge").value;
+    // let inputGender =document.getElementById("txtGender").value;
+    // let inputService = document.getElementById("txtService").value;
 
     //create the obj
-    let newPet = new Pet(inputName,inputAge,inputGender,inputService);
+    let newPet = new Pet(inputName.value,inputAge.value,inputGender.value,inputService.value,inputBreed.value,inputVaccine.value);
     console.log(newPet);
+
+    if(isValid(newPet)==true){
     pets.push(newPet);
     displayTotals();
-    displayCards(); //displayTable()
+    // displayCards(); 
+    displayTable()
+    }  
+    // }else{
+        // alert("Complete all information.")
+    // }
+}
+
+function deletePet(petId){
+    console.log("Deleting pet..."  + petId);
+    document.getElementById(petId).remove();
+    pets.splice(petId,1);
+    displayTable();
+    displayTotals();
 }
 
 function init(){
     console.log("init");
-    let pet1 = new Pet("Q",99,"Male","nails");
+    let pet1 = new Pet("Q",99,"Male","nails","Labradoodle","yes");
     //create two more pets
     let pet2 = new Pet("Squirrely",11,"Female","shampoo");
-    let pet3 = new Pet("Springy",5,"Male","nails");
+    let pet3 = new Pet("Springy",5,"Male","nails","Toy", "no");
     let pet4 = new Pet("Scooby",99,"Male","Grooming");
-    let pet5 = new Pet("Scrappy",88,"Male","Vaccines");
+    let pet5 = new Pet("Scrappy",88,"Male","Cut/Style");
     let pet6 = new Pet("Speedy",87,"Male","Nails");
 
 
    //push the pets on the array
-   pets.push(pet1,pet2,pet3,pet4,pet5,pet6);
+    pets.push(pet1,pet2,pet3,pet4,pet5,pet6);
    // display the three pets on the console
-   console.log(pets);
-   displayTotals();
-   displayCards();
+    console.log(pets);
+    displayTotals();
+    // displayCards();
+    displayTable();
 }
 
 window.onload=init;//wait to render the HTML

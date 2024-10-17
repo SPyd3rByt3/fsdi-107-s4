@@ -94,6 +94,26 @@ body{
     background-color: #dedede;
 }
 
+.petTable{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+    border: 1px solid black;
+
+    margin-bottom: 5px;
+
+    padding: 10px;
+
+    background-color: darkcyan;
+    color: #ffcc00;
+    box-shadow: 0 0 20px rgba(red, green, blue, alpha);
+}
+
+.container-sm table table-striped{
+    color: #ffcc00;
+    box-shadow: 0 0 20px rgba(red, green, blue, alpha);
+}
+
 img{
 
     max-width: 600px;

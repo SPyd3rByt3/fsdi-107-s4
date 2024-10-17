@@ -20,6 +20,7 @@
             </nav>
         </div>
     </header>
+
     <main>
         <div class="container-sm">
             <h2>Register a new pet</h2>
@@ -43,6 +44,10 @@
                     <option value="nails">Nails</option>
                     <option value="vaccines">Vaccines</option>
                 </select>
+            </div>
+            <div class="mb-3">
+                <label>Breed: </label>
+                <input class="form-control" type="text" id="txtBreed">
             </div>
             <div class="mb-3">
                 <button class="btn btn-dark" onclick="register()">Register</button>
@@ -75,24 +80,26 @@
         </div>
         <!-- </div> -->
 
-    </style>
-    <thead>
+        
         <table class="table table-striped">
-    </thead>
-            <tr class="pets">
-                <h2>Tabled pets</h2>
-                <tr>Name: ${pet.name}</tr>
-                <tr>Age: ${pet.age}</tr>
-                <tr>Gender: ${tret.gender}</tr>
-                <tr>Service: ${tret.service}</tr>
-                <tr>Breed: ${tret.breed}</tr>
-                <tr>Vaccine: ${tret.vaccine}</tr>
-            </tr>
-
+        <thead>
+                <!-- <tr class="pets"> -->
+                <tr>
+                    <h2>Tabled pets</h2>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Service</th>
+                    <th>Breed</th>
+                    <th>Vaccine</th>
+                </tr>
+        </thead>
+        <!-- </tr> -->
+        <tbody id="petTable">
+        
                     <!-- here the rows are displayed-->
         </tbody>
         </table>
-        </div>
 
         
 
