@@ -20,13 +20,12 @@ function Pet(name,age,gender,service,breed,vaccine){
 function isValid(pet){
     let validation=true;
 
-    if(pet.name==""){
+    if(pets.name==""){
         validation = false;
-        inputName.classList.add("error");
     }
     if(pet.service==""){
         validation = false;
-        inputService.classList.add("error");
+
     }
 
     return validation;

@@ -3,9 +3,9 @@ function displayCards(){
     for(let i=0;i<pets.length;i++){
         // document.getElementById("pets").innerHTML+=
         let pet = pets[i];
-        // console.log(pet.age);
+        console.log(pet.age);
         card+=`
-        <div class="pets ${pet.service}">
+        <div class="pets">
             <p>Name: ${pet.name}</p>
             <p>Age: ${pet.age}</p>
             <p>Gender: ${pet.gender}</p>
@@ -29,7 +29,7 @@ function displayTable(){
     let row="";
     for(let i=0;i<pets.length;i++){
         // document.getElementById("pets").innerHTML+=
-        let pet = pets[i]; //getting the current PET registry
+        let pet = pets[i];
         // console.log(pet.age);
         row+=`
         <tr id="${i}">
@@ -43,7 +43,6 @@ function displayTable(){
             onclick="deletePet(${i})">Delete </button><td>
         </tr>`
         console.log(row);
-        //read MORE about HTML tables\\
         
     }
     document.getElementById("petTable").innerHTML=row;
