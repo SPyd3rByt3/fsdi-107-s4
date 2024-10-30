@@ -1,6 +1,6 @@
 main{
     display: flex;
-    height: (100vh - 37px);
+    height: calc(100vh - 37px);
 
 }
 #list{
@@ -9,7 +9,7 @@ main{
     flex: 3;
 }
 #form{
-    background-color: bisque;
+    background-color: rgb(176, 110, 29);
     
     flex: 2;
 }
