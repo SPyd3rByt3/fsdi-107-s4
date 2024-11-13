@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.get("/")
 def home():
     return "hello from flask"
-# this is just an example
+# this is just an example.
 # @app.post("/")
 # def homePost():
 # return "hello from flask post"
