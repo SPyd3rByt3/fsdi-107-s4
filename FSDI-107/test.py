@@ -117,3 +117,4 @@ print(f"Final Score: {final_score}")
 
 status = update_player_status("Mario", 5, 2500)
 print(status)
+

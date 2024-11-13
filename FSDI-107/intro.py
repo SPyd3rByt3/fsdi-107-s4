@@ -15,7 +15,7 @@ is_sunny = False #Boolean
 
 comment_division()
 
-# ======== Type Conversion ========
+# ======== Type Conversion ======== 
 num = 9.67
 print(int(num)) # convrt a Float to an Integer
 
